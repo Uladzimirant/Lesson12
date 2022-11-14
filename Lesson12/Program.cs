@@ -7,7 +7,7 @@ namespace Lesson12
         public static void Main(string[] args)
         {
             CMDHandler cmd = new CMDHandler(generateHelpCommands:false);
-            cmd.Description = "Enter login, password and confirm password separated by comma \',\'";
+            cmd.Description = "Enter login, password and confirm password separated by comma \',\', or type quit to exit";
             cmd.DefaultAction = input =>
             {
                 string[] inArr = input.Split(",").Select(e => e.Trim()).ToArray();
